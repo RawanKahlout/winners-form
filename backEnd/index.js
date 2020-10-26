@@ -6,8 +6,8 @@ const bodyParser = require('body-parser');
 const normalizePort = require('normalize-port');
 const http = require('http');
 const ports = normalizePort('4000' || process.env.port);
-const url = "mongodb://localhost:27017/marketingWinner?authSource=CC6Kn63Z{'6G --username admin";
-//const url = 'mongodb://localhost/marketingWinner';
+
+
 mongoose.connect(url,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
