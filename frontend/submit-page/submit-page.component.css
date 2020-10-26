@@ -1,0 +1,38 @@
+@media screen and ( max-width: 1024px ) {
+    img.responsive2 { width: 400px; }
+    img.responsive { width: 60px; }
+    a{
+    font-size: 11px;
+    }
+    .material-icons{
+     width: 10px;
+     height: 10px;
+    }
+     }
+@media screen and ( min-width: 1025px) {
+    img.responsive2 { width: 800px;}
+    img.responsive { width: 99px;}
+           a{font-size: 16px;}
+    }
+    img.responsive2 { height: auto; }
+    .myCenter{
+        padding-top: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+     
+      }
+
+ img.responsive { height: auto; }
+ img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0;
+    }
+.spacer {
+    flex : 1 1 auto}
+.mat-toolbar{
+    background-color: black;}
+         

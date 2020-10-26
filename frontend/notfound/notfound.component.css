@@ -1,0 +1,28 @@
+.error-code{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    display: block;
+    text-align: center;
+    font-size: 60px;
+    color:#FBAD18;
+    font-weight: bold;
+    
+ 
+}
+.text{
+    padding-top: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -200px;
+    text-align: center;
+    display: block;
+    text-align: center;
+    font-size: 38px;
+    color:grey;
+    font-weight: bold;
+}

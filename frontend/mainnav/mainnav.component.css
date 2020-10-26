@@ -1,0 +1,127 @@
+.logoutButton{
+    font-size: 15px;
+    font-weight: bold;
+    color: #aaaaaa;
+    margin-top: 40px;
+    position: absolute;
+    right: 0px;
+    margin-right: 130px;
+ 
+}
+
+.hr-white{
+    margin-right: 105px;
+    margin-left: 105px;
+    border-top-style: solid;
+    color: #aaaaaa;
+    border-width: 0.5px;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 30px;
+    width: 85%;
+}
+.material-icons{
+    padding: 0;
+    color: #aaa;
+}
+a{
+    color: #aaaaaa;
+    margin-top: 60px;
+    font-family: 'Cairo', sans-serif;
+    float: right;
+    font-size: 12;
+    text-decoration: none;
+    margin-left: 20px ;
+    margin-right:20px ;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+}
+a:hover {
+    color:#FBAD18;
+}
+.logoutButton :hover{
+    color:#FBAD18;
+}
+img.responsive {
+    display: inline-block;
+    margin-left: 100px;
+    margin-right: auto;
+    margin-top: 40px;
+    height: 5px;
+}
+@media screen and ( max-width: 1024px ) {
+    .logoutButton{
+        font-size: 15px;
+        font-weight: bold;
+        color: #aaaaaa;
+        margin-top: 20px;
+        position: absolute;
+        right: 0px;
+        margin-right: 20px;
+        margin-left: 20px;
+     
+    }
+    .hr-white{
+        margin-right: 20px;
+        margin-left: 20px;
+        border-top-style: solid;
+        color: #aaaaaa;
+        border-width: 0.5px;
+        text-align: center;
+        padding-top: 100px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    img.responsive { width: 60px; 
+    margin-left:20px;
+    }
+   a{
+    font-size: 8px;
+    }
+    .material-icons{
+     width: 10px;
+    height: 10px; 
+    }
+    .logoutButton{
+    font-size: 15px;
+    font-weight: bold;
+    color: #aaaaaa;
+    margin-top: 50px;
+    }
+    img.responsive {
+    display: inline-block;
+    margin-right: auto;
+    margin-top: 40px;
+    height: 5px;
+    }
+    .hr-white{
+    width: 100%;
+    }
+    .spacer {
+    flex : 1 1 auto;
+    margin-right: 20px;
+    }
+}
+
+@media screen and ( min-width: 1025px) {
+    .spacer {
+        flex : 1 1 auto;
+        margin-right: 200px;
+        }
+    
+    img.responsive { width:99px;}
+    a{font-size: 16px;}
+    }
+img.responsive { height: auto; }
+img {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0px;
+}
+
+.mat-toolbar{
+    background-color: black;
+}
+  

@@ -1,0 +1,56 @@
+<app-mainnav></app-mainnav>
+
+        <form [formGroup]="winnerForm" (ngSubmit)="onSubmit()">
+          <div>
+            <div class="form-group">
+              <label class="input-label">:صورة البانر</label>
+                <input type="file" name="file" formControlName="file"  accept="image/*" (change)="bannerObj($event)">
+            </div>
+            <div class="form-group">
+              <label class="label-main">:اسم المسابقة</label>
+                <input type="text"  formControlName="competitionName" required >
+            </div>
+          </div>
+          <div class="page-header ">
+            <p class="right-line"><img src="../../assets/hr-right.png" class="line-image"></p>
+            حقول أضافية
+            <p class="left-line"><img src="../../assets/hr-left.png" class="line-image"></p>
+            </div>
+          <form [formGroup]="subWinnerForm" class="sub-form">
+            <label class="first-sub-form-label">اضغط على اضافة لإضافة حقل جديد</label>
+            <div class="extrafeild">
+              <button (click)="addAlias()" class="btn  sub-Button">
+                اضافة</button>
+            </div>
+            <div formArrayName="types" class="form-group ">
+              <div *ngFor="let fieldsType of types.controls ; let j= index ">
+                <label class="sub-form-label" *ngIf="j==0">نوع الحقل</label>
+                <select name="demo" id="#" [formControlName]="j" *ngIf="j==0 || j>0">
+                  <option selected="selected" value="checkBox">Check box</option>
+                  <option value="radioButton">Radio button</option>
+                  <option value="textField">text field</option>
+                  <option value="numberField">number field</option>
+                  <option value="phoneNumber">phone number</option>
+                  <option value="Date">Date</option>
+                  <option value="email">Email</option>
+                  <option value="textArea">Text area</option>
+                  <option value="DropdownMenu">Dropdown menu</option>
+                  <option value="termsAndConditions">Terms and conditions</option>
+                </select>
+              </div>
+            </div>
+            <div formArrayName="labels" class="form-group ">
+              <div *ngFor="let fieldlabels of labels.controls; let i=index" >
+                <label class="sub-form-label" *ngIf="i==0">اسم الحقل</label>
+                <input type="text" class="extra-fields" [formControlName]="i" *ngIf="i==0 || i>0" >
+              </div>
+            </div>
+            <div formArrayName="values" class="form-group ">
+              <div *ngFor="let fieldValues of values.controls; let i=index" >
+                <label  class="sub-form-label" *ngIf="i==0">قيم الحقل</label>
+                <textarea [formControlName]="i" *ngIf="i==0 || i>0" > </textarea>
+              </div>
+            </div>
+          </form>
+            <button type="submit" class="submit-creation-form">إنشاء</button>
+        </form>

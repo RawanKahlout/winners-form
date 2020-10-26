@@ -1,0 +1,32 @@
+<app-mainnav></app-mainnav>
+
+<div class="page-header ">
+<p class="right-line"><img src="../../assets/hr-right.png" class="line-image"></p>
+الفائـزين
+<p class="left-line"><img src="../../assets/hr-left.png" class="line-image"></p>
+</div>
+
+<div class="myCenter content" *ngIf="exist">
+    <img src='../../assets/notFound.png'>
+    <p class='notFoundText'>لا يوجد فائزين</p>
+</div>
+<table class=" table-striped table-hover container" >        
+    <thead class="thead">
+        <tr>
+            <th *ngFor="let header of tableHeader" scope="col">
+                {{ header }}
+            </th>
+
+        </tr>
+    </thead>
+        <tbody class="tbody">
+            <tr *ngFor="let row of matrix">
+                <td *ngFor="let cell of row" >
+                    <div *ngIf="cell==true"><i class="material-icons">done</i></div>
+                    <div *ngIf="cell==''"><i class="material-icons">minimize</i></div>
+                    <div *ngIf="cell!==true && cell !== false">{{cell}}</div>
+                </td>
+            </tr>
+            
+    </tbody>
+</table>

@@ -1,0 +1,94 @@
+<mat-toolbar class="mat-elevation-z4">
+    <span><img src="../../assets/logo-en.png" class="responsive"></span>
+</mat-toolbar>
+<div class="container col-md-10 col-md-offset-1 parentDiv" >
+    <img class="Bimg myCenter"  [src]="path">
+    <div id="winnerForm " class="col-md-10 col-md-offset-1">
+        <form (ngSubmit)="onSubmit(winnerForm)" #winnerForm="ngForm" class="pageCenter">
+            <div *ngIf="message"class="alert-message"><h2>{{message}}<i class="material-icons">highlight_off</i></h2></div>
+            <div *ngFor="let i of extraField">
+                <div *ngIf="i.type === 'radioButton'" class="form-group">
+                    <label>
+                        {{i.name}}
+                    </label>
+                    <div *ngFor="let j of i.val" class="checkRadio ">
+                        {{j}} <input type="radio" value="{{j}}" name="{{i.name}}"  class="fields" ngModel>
+                    </div>
+                </div>
+                <div *ngIf="i.type === 'checkBox'" class="form-group">
+                    <label>
+                        {{i.name}}
+                    </label>
+                    <div *ngFor="let j of i.val" class="checkRadio">
+                        {{j}} <input type="checkbox" value="{{j}}" name="{{j}}"  class=" fields" ngModel>
+                    </div>
+                </div>
+                <div *ngIf="i.type === 'textField'" class="form-group">
+                    <label>{{i.name}}</label> 
+                    <mat-form-field> 
+                        <input matInput type="text" name="{{i.name}}" class="form-control fields" ngModel> 
+                    </mat-form-field>
+                    </div>
+                <div *ngIf="i.type === 'numberField'" class="form-group">
+                    <label>{{i.name}}</label>
+                    <mat-form-field> 
+                    <input matInput type="text" name="{{i.name}}" class="form-control fields" ngModel>
+                    </mat-form-field> 
+                </div>
+                <div *ngIf="i.type === 'phoneNumber'" class="form-group">
+                    <label>{{i.name}}</label>
+                    <mat-form-field> 
+                    <input matInput type="text" name="{{i.name}}" class="form-control fields" pattern=[0-9]{9} ngModel>
+                    </mat-form-field> 
+                </div>
+               
+                <div *ngIf="i.type === 'email'" class="form-group">
+                    <label>{{i.name}}</label>
+                    <mat-form-field> 
+                    <input matInput type="email" name="{{i.name}}" class="form-control fields" ngModel>
+                    </mat-form-field> 
+                </div>
+                <div *ngIf="i.type === 'textArea'" class="form-group">
+                    <label>{{i.name}}</label>
+                    <mat-form-field> 
+                    <textarea matInput name="{{i.name}}" class="" ngModel>
+                    </textarea>
+                </mat-form-field> 
+                </div>
+                <div *ngIf="i.type === 'input'" class="form-group">
+                    <label>{{i.name}}</label>
+                    <input type="file" name="file" formControlName="file" class="form-control-file"
+                        style="padding-left:50%;" (change)="fileObj($event)">
+                </div>
+                <div *ngIf="i.type === 'DropdownMenu'" class="form-group">
+                    <label>{{i.name}}</label>
+                    <select name="{{i.name}}" id="#" class="form-control fields"  ngModel >
+                    <option *ngFor="let j of i.val" value="{{j}}">{{j}}</option>
+                    </select>
+                </div>
+                <div *ngIf="i.type === 'Date'" class="form-group">
+                    <label>{{i.name}}</label>
+                    <mat-form-field>
+                   <input matInput type="date" name="{{i.name}}" class="form-control fields" placeholder="mm-dd-yyyy" ngModel>
+                </mat-form-field>
+                </div>
+                <div *ngIf="i.type === 'termsAndConditions'" class="form-group">
+                    <label class="terms">
+                        {{i.name}}
+                        <input type="radio" value="{{i.val}}" name="{{i.name}}"  class=" fields" ngModel>
+                    </label>
+                    <p>{{i.val}}</p>
+                    <br>
+                    <br>
+                    </div>
+            </div>
+<br>
+<br>
+<br>
+<br>
+            <div class="buttonContainer">
+                <button type="submit" class=" pryButton" >ارسال</button>
+            </div>
+        </form>
+    </div>
+</div>

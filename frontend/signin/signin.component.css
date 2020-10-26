@@ -1,0 +1,52 @@
+.forms-input{
+    float: right;
+}
+.material-icons{
+    float : right;
+}
+placeholder{
+    text-align: center;
+}
+.alert{
+
+        font-family: 'Cairo', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #721c24;
+        margin-top: 0px;
+        width: 100%;
+        float: right;
+        text-align: right;
+}
+.center{
+    text-align: center;
+}
+label {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+  }
+  .pryButton{
+    text-align: center;
+    color:#FBAD18;
+    border: 2px solid black;
+    border-radius: 0px 8px 0px 8px;
+    background-color: black;
+    width :99%;
+    font-weight: bold;
+    margin: auto;
+    padding: 1.5%;
+    }
+    .erorrLabels{
+        float: right;
+        padding: 5px;
+    }
+    .logo{
+        width: 120px;
+        height: auto;
+    }
+    @media screen and ( max-width: 1024px ) {
+        img.logo { width: 110px; }
+    }
+       
+    img.logo { height: auto; }

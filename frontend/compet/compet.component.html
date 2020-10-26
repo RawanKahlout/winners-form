@@ -1,0 +1,26 @@
+<app-mainnav></app-mainnav>
+<div class="page-header ">
+  <p class="right-line"><img src="../../assets/hr-right.png" class="line-image"></p>
+  تفاصيل المسابقات 
+  <p class="left-line"><img src="../../assets/hr-left.png" class="line-image"></p>
+  </div>
+  <div *ngIf="text" class='notFoundText'>
+    <img src='../../assets/notFound.png'>
+    <p class="space">لم يتم إضافة أي مسابقة</p>
+  </div>
+ <table *ngIf="!text" class=" table-striped table-hover  myCenter  container">
+   <thead class="thead "> 
+     <th scope="col">اسم المسابقة</th>
+     <th scope="col">الرابط</th>
+     <th scope="col">الفائزين</th>
+  </thead>
+   <tbody class="tbody">
+     <tr *ngFor="let cell of dataSource; let i = index">
+       <td>{{cell.competionName}}</td>
+       <td><a routerLink="/winners-form/{{cell.shortId}}">{{formUrl}}{{cell.shortId}}</a></td>
+       <td><button class="btn pryButton" routerLink="/winners-data/{{cell.shortId}}">اضغط هنا</button></td>
+     </tr>
+   </tbody>
+ </table>
+
+ 
