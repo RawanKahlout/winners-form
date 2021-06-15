@@ -13,14 +13,17 @@
      <th scope="col">اسم المسابقة</th>
      <th scope="col">الرابط</th>
      <th scope="col">الفائزين</th>
+     <th scope="col">تعديل</th>
+     <th scope="col">حذف</th>
   </thead>
    <tbody class="tbody">
      <tr *ngFor="let cell of dataSource; let i = index">
        <td>{{cell.competionName}}</td>
        <td><a routerLink="/winners-form/{{cell.shortId}}">{{formUrl}}{{cell.shortId}}</a></td>
        <td><button class="btn pryButton" routerLink="/winners-data/{{cell.shortId}}">اضغط هنا</button></td>
+       <td><button class="btn pryButton" routerLink="/edit-Form/{{cell.shortId}}">تعديل</button></td>
+       <td><button class="btn pryButton" (click)="deleteCompetion(cell.shortId)">حذف</button></td>
      </tr>
    </tbody>
  </table>
 
- 
