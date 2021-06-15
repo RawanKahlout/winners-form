@@ -18,7 +18,8 @@ import {MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { SubmitPageComponent } from './submit-page/submit-page.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import{MatInputModule}from '@angular/material/input'
+import{MatInputModule}from '@angular/material/input';
+import { EditWinnersFormComponent } from './edit-winners-form/edit-winners-form.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import{MatInputModule}from '@angular/material/input'
     SigninComponent,
     MainnavComponent,
     SubmitPageComponent,
+    EditWinnersFormComponent,
   ],
   imports: [
     BrowserModule,
