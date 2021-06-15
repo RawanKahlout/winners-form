@@ -1,7 +1,8 @@
-import { Component, OnInit ,ViewChild} from '@angular/core';
+import { Component, OnInit ,ChangeDetectorRef} from '@angular/core';
 import {dataservice} from '../data.service'
 import {Router}from '@angular/router';
 import {userServices} from '../user.service';
+import { formServices } from '../forms.service';
 import {environment} from '../../environments/environment';
 const formsUrl = environment.formsUrl
 @Component({
@@ -11,7 +12,7 @@ const formsUrl = environment.formsUrl
 })
 export class CompetComponent implements OnInit {
   formUrl = formsUrl;
-  constructor(private _router: Router,private _dataservice : dataservice , private _userServices : userServices ) { }
+  constructor(private _router: Router,private _dataservice : dataservice , private _userServices : userServices ,private _formsService : formServices,private changeDetectorRef: ChangeDetectorRef) { }
   dataSource ;
   text;
   ngOnInit() {
@@ -30,6 +31,13 @@ export class CompetComponent implements OnInit {
     
     }
     );
+  }
+  deleteCompetion(templateId){
+   this._formsService.delteCopmetion(templateId).subscribe(data=>{  
+    location.reload();
+},error=>{
+    console.log(error);
+})
   }
  
 }
