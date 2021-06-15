@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { HttpParams } from '@angular/common/http';
 import {environment} from "../environments/environment"
+import { error } from 'protractor';
+import { data } from 'jquery';
 const apiUrl = environment.apiUrl;
 
 @Injectable({ providedIn: 'root' })
@@ -15,7 +17,9 @@ export class formServices {
 
     constructor(private _router: Router, private _http: HttpClient) { }
 
-
+    delteCopmetion(templateId){
+        return this._http.delete(apiUrl+'/api/deleteTemplate/'+templateId)
+    }
     submitTemplateForm(fileObj) {
  
         return this._http.post(apiUrl+'/api/postTemplate', fileObj).subscribe(res => {
@@ -49,15 +53,22 @@ export class formServices {
     getFormTemplate(routeParams) {
         return this._http.get(apiUrl+'/api/getTemplate/' + routeParams)
     }
-
-    submitWinnerData(formData, shortId ,competitionName) {
-        this._http.post(apiUrl+'/api/submitWinnerData',{formData,shortId,competitionName}).subscribe(data => {
-            this._router.navigate(['/Submited']);
-        },
-        error=>{
-           
+    updateFormTemplate(templateObj) {
+        console.log(templateObj);
+        return this._http.put(apiUrl +'/api/putDataTemplates', templateObj ).subscribe( (res) => {
+            console.log(res);
+            this._router.navigate(['/competitions-list'])
+        }, error => {
+            console.log(error);
+           this._router.navigate(['/signin'])
+           localStorage.removeItem('token');
         }
         )
+    }
+    submitWinnerData(formData, shortId ,competitionName) {
+
+        return this._http.post(apiUrl+'/api/submitWinnerData',{formData,shortId,competitionName})
+        
     }
 
 }
