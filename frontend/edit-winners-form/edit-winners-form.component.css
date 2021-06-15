@@ -1,0 +1,274 @@
+
+.main-label{
+  color: #FBAD18;
+  margin-left: 100%;
+  margin-bottom: 50px;
+  font-family: 'Cairo', sans-serif;
+}
+/*
+.main-value-label{
+  color: #FBAD18;
+  margin-left: 100%;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+*/
+.form-group{
+  float: right;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: 400px;
+  }
+  form{
+    text-align: right;
+    width: 100%;
+  }
+  .label-main{
+    float: right;
+    width: 100px;
+    margin-left: 80px;
+    color: whitesmoke; 
+  }
+  input[type=text] {
+    color: #aaaaaa;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #aaaaaa;
+    width:30.5%;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    margin-bottom: 40px;
+    }
+  .input-label{
+    float: right;
+    width: 80px;
+    margin-left: 40px;
+    color: whitesmoke;
+  }
+  .sub-form-label{
+   width: 100px; 
+   color: whitesmoke;
+   float: right;
+  }
+  .first-sub-form-label{
+    width: 200px; 
+    color: whitesmoke;
+    float: right;
+    margin-right: 400px;
+    margin-left: 50px;
+   }
+  input[class*="extra-fields"] {
+    color: #aaaaaa;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #aaaaaa;
+    width:30%;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    margin-right: 42%;
+    margin-left: 58%;
+  }
+  .sub-Button{
+    color: #aaaaaa;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #aaaaaa;
+    width:20%;
+    padding: 5px;
+    margin-left: 35%;
+    margin-right: 43%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: black;
+    text-align: center;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+  .sub- {
+  margin-top: 100px;
+  
+  }
+  .submit-creation-form {
+    color: #aaaaaa;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #aaaaaa;
+    width:15%;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    display: block;
+    margin-right: 57%;
+    margin-left: 43%;
+  }
+  select
+  {
+    color: #aaaaaa;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #aaaaaa;
+    width:30%;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    display: block;
+    margin-right: 42%;
+    margin-left: 58%;
+    margin-bottom: 20px;
+    display: block;
+    margin-bottom: 20px;
+  
+  }
+  textarea{
+    color: #aaaaaa;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #aaaaaa;
+    width:31%;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    display: block;
+    margin-right: 42%;
+    margin-left: 55%;
+    margin-bottom: 20px;
+  }
+  .select-selected {
+  background-color: black;
+  }
+  
+  button:hover {
+    color:#FBAD18;
+    border-color: #FBAD18;
+  }
+  input:hover{
+    border-color: #FBAD18;
+  }
+  textarea:hover{
+    border-color: #FBAD18;
+  }
+  select:hover{
+    border-color: #FBAD18;
+  }
+  .textarea-extrafeild{
+    color: #aaaaaa;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #aaaaaa;
+    width:31%;
+    padding: 5px;
+    background-color: black;
+    text-align: center;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    display: block;
+    margin-right: 42%;
+    margin-left: 58%;
+    margin-bottom: 20px;
+  }
+  .ng-untouched::-webkit-input-placeholder { color: #aaaaaa;}
+
+  @media screen and ( max-width: 1024px ) {
+    .ng-untouched::-webkit-input-placeholder { color: whitesmoke;}
+    .form-group{
+      float: right;
+      width: 100%;
+      margin-bottom: 20px;
+      margin-right: 50px;
+      }
+      .first-sub-form-label{
+        width: 200px; 
+        color: whitesmoke;
+        float: right;
+        margin-right: 50px;
+        margin-left: 50px;
+       }
+       textarea{
+        color: #aaaaaa;
+        text-align: center;
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: #aaaaaa;
+        width:30%;
+        padding: 5px;
+        background-color: black;
+        text-align: center;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        display: block;
+        margin-right: 50%;
+        margin-left: 50%;
+        margin-bottom: 20px;
+      }
+      select
+        {
+          color: #aaaaaa;
+          text-align: center;
+          border-style: solid;
+          border-width: 0.5px;
+          border-color: #aaaaaa;
+          width:30%;
+          padding: 5px;
+          background-color: black;
+          text-align: center;
+          -moz-box-sizing:border-box;
+          -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+          display: block;
+          margin-right: 50%;
+          margin-left: 50%;
+          margin-bottom: 20px;
+          display: block;
+          margin-bottom: 20px;
+  
+        }
+        input[class*="extra-fields"] {
+          color: #aaaaaa;
+          text-align: center;
+          border-style: solid;
+          border-width: 0.5px;
+          border-color: #aaaaaa;
+          width:30%;
+          padding: 5px;
+          background-color: black;
+          text-align: center;
+          -moz-box-sizing:border-box;
+          -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          display: block;
+          margin-right: 50%;
+          margin-left: 50%;
+        }
+  }
