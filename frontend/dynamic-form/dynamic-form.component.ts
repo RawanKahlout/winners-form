@@ -82,7 +82,7 @@ export class DynamicFormComponent implements OnInit {
     var dynamicFeildsLabels = this.labels.value;
     if (this.types.invalid || this.labels.invalid)
     {
-      console.log("here")
+     
     }
     for (var i = 0; i < dynamicFeildsTypes.length; i++) {
       this.returnedVal = dynamicFeildsValues[i].split(",")
