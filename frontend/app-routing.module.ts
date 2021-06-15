@@ -6,7 +6,8 @@ import {NotfoundComponent} from './notfound/notfound.component';
 import {WinnersDataComponent }from './winners-data/winners-data.component';
 import{SigninComponent} from './signin/signin.component';
 import{CompetComponent}from './compet/compet.component';
-import {SubmitPageComponent}from './submit-page/submit-page.component'
+import {SubmitPageComponent}from './submit-page/submit-page.component';
+import {EditWinnersFormComponent}from './edit-winners-form/edit-winners-form.component';
 import { from } from 'rxjs';
 const routes: Routes = [
 {path : 'form-creation' , component: DynamicFormComponent} ,
@@ -15,6 +16,7 @@ const routes: Routes = [
 {path : 'signin', component:SigninComponent},
 {path:'competitions-list' , component:CompetComponent},
 {path:'Submited' , component:SubmitPageComponent},
+{path :'edit-Form/:id',component:EditWinnersFormComponent},
 {path:'',redirectTo:"signin",pathMatch: 'full'},
 {path : '**' , component:NotfoundComponent}
 ];
@@ -24,4 +26,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
  }
-export const routingPaths =[DynamicFormComponent ,WinnersformComponent,NotfoundComponent ,WinnersDataComponent,SigninComponent] ; 
+export const routingPaths =[DynamicFormComponent ,WinnersformComponent,NotfoundComponent ,WinnersDataComponent,SigninComponent,EditWinnersFormComponent] ;
