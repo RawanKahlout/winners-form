@@ -9,8 +9,12 @@
 <div class="myCenter content" *ngIf="exist">
     <img src='../../assets/notFound.png'>
     <p class='notFoundText'>لا يوجد فائزين</p>
-</div>
-<table class=" table-striped table-hover container" >        
+</div> 
+<div class="custom-group" *ngIf="! exist">
+    <button (click)="download()" class="export-button"><i class="material-icons">vertical_align_top
+    </i>تصدير</button>
+</div>  
+<table class=" table-striped table-hover container" >     
     <thead class="thead">
         <tr>
             <th *ngFor="let header of tableHeader" scope="col">
